@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | News homepage</title>
+  <link href="./styles/styles.css" rel="stylesheet">
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="text-dark-grayish-blue font-body">
+
+  <nav class="bg-inherit">
+    <div class="max-w-7xl mx-40 pt-[90px] pb-[50px]">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 right-0 flex items-center">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Heroicon name: outline/bars-3
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <img class="hidden h-6 w-6" src="../assets/images/icon-menu.svg" alt="Open main menu">
+            <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x-mark
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <!-- <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg> -->
+
+            <img class="hidden h-6 w-6" src="../assets/images/icon-menu-close.svg" alt="close main menu">
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-between">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="block h-8 w-auto lg:hidden" src="../assets/images/logo.svg" alt="Your Company">
+            <img class="hidden h-8 w-auto lg:block" src="../assets/images/logo.svg" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4 gap-x-10">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300  hover:text-white" -->
+              <a href="#" class="text-dark-grayish-blue hover:text-soft-orange  py-2 rounded-md text-sm font-medium"
+                aria-current="page">Home</a>
+
+              <a href="#"
+                class="text-dark-grayish-blue  hover:text-soft-orange  py-2 rounded-md text-sm font-medium">New</a>
+
+              <a href="#"
+                class="text-dark-grayish-blue  hover:text-soft-orange  py-2 rounded-md text-sm font-medium">Popular</a>
+
+              <a href="#"
+                class="text-dark-grayish-blue  hover:text-soft-orange py-2 rounded-md text-sm font-medium">Trending</a>
+
+              <a href="#"
+                class="text-dark-grayish-blue  hover:text-soft-orange py-2 rounded-md text-sm font-medium">Categories</a>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!--
+              Dropdown menu, show/hide based on menu state.
+  
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+
+        <a href="#" class="text-grayish-blue hover:text-soft-orange  block px-3 py-2 rounded-md text-sm font-medium"
+          aria-current="page">Home</a>
+
+        <a href="#"
+          class="text-grayish-blue  hover:text-soft-orange block px-3 py-2 rounded-md text-sm font-medium">New</a>
+
+        <a href="#"
+          class="text-grayish-blue  hover:text-soft-orange block px-3 py-2 rounded-md text-sm font-medium">Popular</a>
+
+        <a href="#"
+          class="text-grayish-blue  hover:text-soft-orange block px-3 py-2 rounded-md text-sm font-medium">Trending</a>
+
+        <a href="#"
+          class="text-grayish-blue  hover:text-soft-orange block px-3 py-2 rounded-md text-sm font-medium">Categories</a>
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300  hover:text-white" -->
+
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section hero">
+      <div class="grid grid-cols-3 grid-rows-5 auto-rows-fr grid-flow-row gap-8 mx-40" >
+        <div  class="col-span-2 row-span-3 row-start-1 row-end-4">
+          <img src="../assets/images/image-web-3-desktop.jpg" alt="">
+        </div>
+        <div class="col-span-1  row-start-4 row-span-2">
+          <h1 class="text-5xl font-extrabold text-very-dark-blue">The Bright Future of Web 3.0?</h1>
+        </div>
+        <div class="col-span-1 row-start-4  row-span-2 flex flex-col justify-between">
+          <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of
+            the people.
+            But is it really fulfilling its promise?
+          </p>
+          <button
+            class="bg-soft-red hover:bg-very-dark-blue text-off-white text-base tracking-widest font-semibold w-44 h-12 uppercase space-x-3 ">Read
+            more</button>
+        </div>
+        <div class="grid col-span-1 row-span-5 bg-very-dark-blue text-dark-grayish-blue px-7 py-8">
+          <div class="row-span-1">
+            <h2 class="font-bold text-3xl text-soft-orange mb-5">New</h2>
+          </div>
+    
+          <div class="row-span-1">
+            <h3 class="font-lg font-bold text-off-white mb-5">Hydrogen VS Electric Cars</h3>
+            <p> Will hydrogen-fueled cars ever catch up to EVs? </p>
+          </div>
+    
+          <div class="h-px w-auto bg-dark-grayish-blue"></div>
+    
+          <div class="row-span-1">
+            <h3 class="font-lg font-bold text-off-white mb-5">The Downsides of AI Artistry</h3>
+            <p>What are the possible adverse effects of on-demand AI image generation?</p>
+          </div>
+    
+          <div class="h-px w-auto bg-dark-grayish-blue"></div>
+    
+          <div class="row-span-1">
+            <h3 class="font-lg font-bold text-off-white mb-5">Is VC Funding Drying Up?</h3>
+            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </div>
+        </div>
+    
+      </div>
+
+    </section>
+
+    <section class="section">
+      <div class="grid grid-cols-3 w-full px-40 mt-20 mb-16 gap-x-8">
+        <div class="card grid grid-cols-3 grid-rows-3 h-[130px]  gap-x-4 col-span-1">
+          <div 
+          class="image relative col-span-1 row-span-3">
+          <img class="absolute top-0 left-0 w-full h-full"  src="../assets/images/image-retro-pcs.jpg" alt="">
+    
+          </div>
+          <div class="col-span-2 col-start-2 py-2">
+            <span class="index  text-2xl font-extrabold text-grayish-blue">01</span> 
+            <h3 class="header  text-lg font-bold">Reviving Retro PCs</h3>
+            <p class="description ">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+      <div class="card grid grid-cols-3 grid-rows-3 h-[130px] w-[330px] gap-x-4 col-span-1">
+        <div 
+        class="image relative col-span-1 row-span-3">
+        <img class="absolute top-0 left-0 w-full h-full"  src="../assets/images/image-top-laptops.jpg" alt="">
+  
+        </div>
+
+        <div class="col-span-2 col-start-2 py-2">
+          <span class="index  text-2xl font-extrabold text-grayish-blue">02</span> 
+          <h3 class="header  text-lg font-bold">Top 10 Laptops of 2022</h3>
+          <p class="description ">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+        <div class="card grid grid-cols-3 grid-rows-3 h-[130px] w-[330px] gap-x-4 col-span-1">
+          <div 
+          class="image relative col-span-1 row-span-3">
+          <img class="absolute top-0 left-0 w-full h-full"  src="../assets/images/image-gaming-growth.jpg" alt="">
+    
+          </div>
+          <div class="col-span-2 col-start-2 py-2">
+            <span class="index  text-2xl font-extrabold text-grayish-blue">03</span> 
+            <h3 class="header  text-lg font-bold"> The Growth of Gaming</h3>
+            <p class="description ">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+         
+        </div>
+      </div>
+
+      </div>
+        
+    </section>
+
+  </main>
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">William Farré</a>.
+  </div>
+</body>
+
+</html>
